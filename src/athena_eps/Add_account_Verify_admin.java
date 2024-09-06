@@ -159,6 +159,9 @@ public class Add_account_Verify_admin extends javax.swing.JFrame {
              {
                  JOptionPane.showMessageDialog(null,"Wrong Username or Password!!!","Message",JOptionPane.ERROR_MESSAGE);
              }
+             
+             setVisible(false);
+             new Add_account_add_user().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
