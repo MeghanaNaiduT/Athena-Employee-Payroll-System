@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package athena_eps;
+import java.sql.*;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Meghana Naidu T
@@ -153,6 +157,34 @@ public class Add_account_add_user extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root","W7301@jqir#");
+        String userName=jTextField1.getText();
+        String userPassword=jTextField2.getText();
+        String dept;
+        if(jRadioButton1.isSelected())
+        {
+            dept=jRadioButton1.getText();
+        }
+        else
+        {
+            dept=jRadioButton2.getText();
+        }
+            
+            PreparedStatement ps=con.prepareStatement("insert into Users values(?,?,?)");
+            ps.setString(1,userName);
+            ps.setString(2,userPassword); 
+            ps.setString(3,dept);
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(this,"Insert Successful.");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

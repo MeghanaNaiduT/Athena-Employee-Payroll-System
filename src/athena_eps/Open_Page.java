@@ -45,6 +45,11 @@ public class Open_Page extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         jButton3.setText("LOGIN");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Athena EPS.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -97,6 +102,12 @@ public class Open_Page extends javax.swing.JFrame {
             setVisible(false);
             new Add_account_Verify_admin().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
