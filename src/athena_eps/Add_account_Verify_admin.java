@@ -154,14 +154,15 @@ public class Add_account_Verify_admin extends javax.swing.JFrame {
              else if(jTextField1.getText().contains("0000") && jPasswordField1.getText().contains("9999"))
              {
                  JOptionPane.showMessageDialog(null,"Login Successfull.");
+                 setVisible(false);
+             new Add_account_add_user().setVisible(true);
              }
              else
              {
-                 JOptionPane.showMessageDialog(null,"Wrong Username or Password!!!","Message",JOptionPane.ERROR_MESSAGE);
+                 JOptionPane.showMessageDialog(null,"Wrong Username or Password!!!","Error",JOptionPane.ERROR_MESSAGE);
              }
              
-             setVisible(false);
-             new Add_account_add_user().setVisible(true);
+             
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

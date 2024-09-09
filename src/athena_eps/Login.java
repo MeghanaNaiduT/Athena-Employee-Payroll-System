@@ -183,12 +183,12 @@ public class Login extends javax.swing.JFrame {
                         }
                         else
                         {
-                            JOptionPane.showMessageDialog(null,"Login Failed. Try Again");
+                            JOptionPane.showMessageDialog(null,"Login Failed.Check Password and Try Again");
                         }
                     }
                     else
                     {
-                        JOptionPane.showMessageDialog(null,"User Account not Found!!");
+                        JOptionPane.showMessageDialog(null,"User Account not Found!!","Error",JOptionPane.ERROR_MESSAGE);
                     }
 
                 } catch (ClassNotFoundException | SQLException ex)

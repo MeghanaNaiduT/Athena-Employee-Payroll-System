@@ -180,6 +180,8 @@ public class Add_account_add_user extends javax.swing.JFrame {
             ps.setString(3,dept);
             ps.executeUpdate();
             JOptionPane.showMessageDialog(this,"Insert Successful.");
+            setVisible(false);
+            new Login().setVisible(true);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
