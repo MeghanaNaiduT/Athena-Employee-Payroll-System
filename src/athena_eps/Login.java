@@ -165,6 +165,7 @@ public class Login extends javax.swing.JFrame {
             else
              {
                 String pass=jPasswordField1.getText();
+                String userId=jTextField1.getText();
                 try
                 {
                     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -179,7 +180,10 @@ public class Login extends javax.swing.JFrame {
                         {
                             JOptionPane.showMessageDialog(null,"Login Successful");
                             dept=rs.getString("UserDept");
+                            new HomePageHR().setVisible(true);
+                            HomePageHR.Instance.lbl.setText(jTextField1.getText());
                             setVisible(false);
+                            
                         }
                         else
                         {
